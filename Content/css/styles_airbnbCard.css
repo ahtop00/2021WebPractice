@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #1f2d3d;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.card {
+  display: flex;
+  margin: 100px auto;
+  width: 900px;
+  height: 250px;
+  padding: 24px;
+  background-color: #fff8dc;
+}
+
+.card-image {
+  position: relative;
+  margin-right: 16px;
+  width: 300px;
+  height: 200px;
+  background-image: url("../assets/images/vitaly-otinov-vch_j9FQcvQ-unsplash.jpg");
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card-image .Like-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-image: url("../assets/images/heart.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: center center;
+  padding: 8px 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  transition: ease-in all 4s;
+}
+
+.card.active {
+  background-color: tomato;
+  transition: ease-in all 4s;
+}
+
+.card-content {
+  margin: 0px 10px;
+  flex-grow: 1;
+}
+
+.card-header {
+  width: 540px;
+  display: flex;
+  flex-flow: row;
+  color: gray;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.property-type span {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.plus-badge {
+  display: inline-block;
+  background-color: #722f37;
+  font-weight: 500;
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 4px;
+  line-height: 1.42;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+
+.property-rate strong {
+  font-weight: 400;
+  margin-left: auto;
+  color: #1f2d3d;
+}
+
+.property-rate::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../assets/images/star.svg");
+  background-size: contain;
+}
+
+.card-detail {
+  color: gray;
+}
+
+.property-detail {
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.property-detail dd span::after {
+  /* inline */
+  content: "·";
+  margin: 0 8px;
+}
+
+.property-detail dd span:last-child::after {
+  content: "";
+  margin: 0 0;
+}
+
+.property-detail div:first-child {
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
